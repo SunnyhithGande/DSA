@@ -12,10 +12,10 @@ class Node
 }
 class DoubleLinkedList
 {
-    ////INSERTING AT FIRST
     private Node head;
     public void insertAtFirst(int data) 
     {
+        //insert at first
         Node newNode = new Node(data);
         if (head == null) 
         {
