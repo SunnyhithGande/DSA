@@ -1,4 +1,6 @@
-public class ArrayQueue {
+import java.util.*;
+public class ArrayQueue 
+{
     private int[] queue;     
     private int front;      
     private int rear;        
