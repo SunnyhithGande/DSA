@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-class Queue {
+class Queue 
+{
     private int[] arr;    // Array to store elements
     private int front;    // Index for the front of the queue
     private int rear;     // Index for the rear of the queue
@@ -8,7 +9,8 @@ class Queue {
     private int count;    // Current number of elements in the queue
 
     // Constructor to initialize the queue
-    public Queue(int size) {
+    public Queue(int size) 
+    {
         this.size = size;
         arr = new int[size];
         front = 0;
@@ -17,7 +19,8 @@ class Queue {
     }
 
     // Check if the queue is empty
-    public boolean isEmpty() {
+    public boolean isEmpty() 
+    {
         return count == 0;
     }
 
@@ -27,8 +30,10 @@ class Queue {
     }
 
     // Add an element to the queue (enqueue)
-    public void enqueue(int element) {
-        if (isFull()) {
+    public void enqueue(int element) 
+    {
+        if (isFull()) 
+        {
             System.out.println("Queue is full. Cannot enqueue " + element);
             return;
         }
@@ -39,8 +44,10 @@ class Queue {
     }
 
     // Remove an element from the queue (dequeue)
-    public int dequeue() {
-        if (isEmpty()) {
+    public int dequeue() 
+    {
+        if (isEmpty()) 
+        {
             System.out.println("Queue is empty. Cannot dequeue.");
             return -1; // Return -1 to indicate an error
         }
@@ -52,8 +59,10 @@ class Queue {
     }
 
     // Peek the front element of the queue
-    public int peek() {
-        if (isEmpty()) {
+    public int peek() 
+    {
+        if (isEmpty())
+        {
             System.out.println("Queue is empty. Nothing to peek.");
             return -1; // Return -1 to indicate an error
         }
@@ -61,21 +70,26 @@ class Queue {
     }
 
     // Print all elements in the queue
-    public void display() {
-        if (isEmpty()) {
+    public void display()
+    {
+        if (isEmpty()) 
+        {
             System.out.println("Queue is empty.");
             return;
         }
         System.out.print("Queue elements: ");
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
+        {
             System.out.print(arr[(front + i) % size] + " ");
         }
         System.out.println();
     }
 }
 
-public class QueueOperations {
-    public static void main(String[] args) {
+public class QueueOperations 
+{
+    public static void main(String[] args) 
+    {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the size of the queue: ");
@@ -83,7 +97,8 @@ public class QueueOperations {
 
         Queue queue = new Queue(size);
 
-        while (true) {
+        while (true) 
+        {
             System.out.println("\nQueue Operations:");
             System.out.println("1. Enqueue");
             System.out.println("2. Dequeue");
@@ -93,7 +108,8 @@ public class QueueOperations {
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
 
-            switch (choice) {
+            switch (choice) 
+            {
                 case 1:
                     System.out.print("Enter the element to enqueue: ");
                     int element = scanner.nextInt();
@@ -104,7 +120,8 @@ public class QueueOperations {
                     break;
                 case 3:
                     int frontElement = queue.peek();
-                    if (frontElement != -1) {
+                    if (frontElement != -1) 
+                    {
                         System.out.println("Front element: " + frontElement);
                     }
                     break;
